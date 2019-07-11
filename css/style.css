@@ -188,7 +188,7 @@
   font-size: 12px;
 }
 
-.our_lastest_work_emailbox:hover .our_lastest_work_email_text{
+.our_lastest_work_text_content:hover .our_lastest_work_email_text{
   transition-duration: 0.3s;
   color: #333;
 }
@@ -275,3 +275,6 @@
 .footer_text{
   color: #fff;
 }
+
+/*チェック　変更すべきところ
+*/
