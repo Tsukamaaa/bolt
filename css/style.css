@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.inner{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+ .bolt_btn{
+   text-decoration: none;
+ }
+
+.header_wrapper{ /*headerの全体的な指定*/
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1; /*これがないとimgのhoverでheaderも変化してしまう*/
+}
+
+.header_content{ /*floatで3つ浮かせて真ん中は何も入っていないパターンかもしれない*/
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 500px;
+}
+
+.header_content:first-child{ 
+  margin-left: 0;
+}
+
+.header_content_textbox{
+  padding: 10px;
+  background-color: #74cfae;
+}
+
+.header_contact_text{ /*contactのfont指定や周りの色 anchor*/
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.header_content_textbox:hover .header_contact_text{
+  transition-duration: 0.3s;
+  color: #333;
+}
+
+
+.title_wrapper{ /*headerのposition: fixedが浮いているからtopは
+  headerの高さ分足している*/
+  background-color: #f2f2f2;
+  padding-top: 328px;
+  padding-bottom: 250px;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+  font-family: Lato;
+}
+
+.title_content{ /*titleの中身の統一指定*/
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title_content:first-child{ /*下の文章が増えてもいい用*/
+  margin-top: 0;
+}
+
+.title_text{
+  font-size: 90px;
+  font-weight: 700;
+  color: #74cfae;
+}
+
+.subtitle_text{
+  font-size: 30px;
+  color: #c0c0c0;
+}
+
+.iphone_wrapper{ /*iphoneの部分　ここでpadding指定しておくをまとめられる*/
+  width: 100%;
+  background-color:  #74cfae;
+  padding-top: 50px;
+  font-family: Raleway;
+}
+
+.iphone_box_content{ /*widthはよくわからんから見た目がいいとこ*/
+  width: 500px;
+  float: left;
+  text-align: center;
+}
+
+.iphone_image_box{ /*imageの下部分をwrapperの下に合わせるためにimageと同じ幅の箱を用意*/
+  width: 208px;
+  height: 295px;
+  margin: 0 auto;
+}
+
+.img_iphone{ /*imgの背景をbackground-colorで塗る*/
+  background-color: #74cfae;
+  text-align: right;
+  bottom: 0;
+}
+
+.iphone_title{ 
+  font-size: 24px;
+  color: #fff;
+}
+
+.iphone_description{
+  padding-top: 35px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.our_lastest_work_wrapper{ /*padding-topで上からの間隔をあける*/
+  width: 100%;
+  font-family: Raleway;
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-color: #f2f2f2;
+}
+
+.our_lastest_work_title{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.our_lastest_work_container{ /*これで箱同士の間隔を0にしないと並ばない*/
+  font-size: 0;
+}
+
+.img_our_lastest_work{ /*imgの間隔を指定*/
+  margin-top: 80px;
+  margin-left: 100px;
+  opacity: 0.7;
+}
+
+.img_our_lastest_work:hover{
+  transition-duration: 0.3s;
+  opacity: 1;
+}
+
+.img_our_lastest_work:nth-child(3n-2){ /*3n-2番目のimgが一番左に来るので、そこのmarginを0にする*/
+  margin-left: 0;
+}
+
+.img_our_lastest_work:nth-child(-n+3){ /*-n+XでX番目まで 3番目まではmargin-topがいらないので外す*/
+  margin-top: 0;
+}
+
+.our_lastest_work_text_container{ /*paddingで間隔をとる*/
+  padding-top: 90px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.our_lastest_work_text_content{ /*inline-blockにしてEmailの部分をvertical-alineで揃えられるようにする*/
+  display: inline-block;
+  text-align: center;
+  margin-left: 90px;
+  vertical-align: middle;
+}
+
+.our_lastest_work_text_content:first-child{ /*文章部分の左にmarginはいらない*/
+  margin-left: 0;
+}
+
+.our_lastest_work_textbox{ /*文章部分のサイズ、大体こんなもんだと思う*/
+  width: 500px;
+}
+
+.our_lastest_work_emailbox{ /*Emailの箱のほう*/
+  padding: 14px 20px;
+  background-color: #74cfae;
+}
+
+.our_lastest_work_email_text{ /*Emailの文字のほう*/
+  color: #fff;
+  font-size: 12px;
+}
+
+.our_lastest_work_emailbox:hover .our_lastest_work_email_text{
+  transition-duration: 0.3s;
+  color: #333;
+}
+
+.our_skills_wrapper{
+  font-family: Raleway;
+  background-color: #4e4e4e;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  width: 100%
+}
+
+.our_skills_title{
+  font-size: 24px;
+  color: #fff;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+/* .our_skills_container{
+} */
+
+.our_skills_content{
+  display: inline-block;
+  padding-left: 180px;
+}
+
+.our_skills_content:first-child{
+  padding-left: 0;
+}
+
+.img_our_skills{
+  padding-bottom: 10px;
+}
+
+.our_skills_text{
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.sns_wrapper{
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.sns_container{
+  font-size: 0;
+}
+
+.sns_content{
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  width: 185px;
+}
+
+.sns_item{
+  color: #74cfae;
+}
+
+.sns_content:hover{
+  transition-duration: 0.3s;
+  background-color: #fff;
+}
+
+.footer_wrapper{
+  width: 100%;
+  background-color: #74cfae;
+  font-family: Lato;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-align: right;
+}
+
+/* .footer_textbox{
+
+} */
+
+.footer_text{
+  color: #fff;
+}
