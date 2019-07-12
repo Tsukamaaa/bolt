@@ -12,12 +12,14 @@
 .inner{
   width: 1100px;
   margin: 0 auto;
-}
+  }
+  
+  .bolt_btn{
+    text-decoration: none;
+  }
 
- .bolt_btn{
-   text-decoration: none;
- }
-
+  
+  
 .header_wrapper{ /*headerの全体的な指定*/
   padding: 15px 0;
   width: 100%;
@@ -36,6 +38,7 @@
 }
 
 .header_content_textbox{
+  z-index: 2;
   display: inline-block;
   padding: 14px 12px;
   font-size: 12px;
@@ -264,9 +267,142 @@
   color: #fff;
 }
 
+@media screen and (max-width: 1199px){ /*max-widthは1最大が1199px*/
+  /*1199px~768pxがタブレット*/
+  .iphone_wrapper{
+    padding-bottom: 25px;
+  }
+
+  .inner{
+    width: 97%;
+  }
+
+  .iphone_box_content{
+    width: auto;
+    float: none;
+  }
+
+  .iphone_box_content:first-child{
+    padding-bottom: 20px;
+  }
+
+  .img_our_latest_work{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .img_our_latest_work{
+    margin: 0 auto;
+  }
+
+  .img_our_latest_work:nth-child(3n-2){
+    margin: 0 auto;
+  }
+
+  .img_our_latest_work:nth-child(3n){
+    margin-bottom: 80px;
+  }
+
+  .our_latest_work_text_content{
+    margin-left: 0;
+
+  }
+
+  .our_latest_work_textbox{
+    width: auto;
+    margin-bottom: 40px;
+  }
+
+  .our_skills_content{
+    display: block;
+    margin: 0 auto 88px;
+  }
+
+  .our_skills_content:last-child{
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px){
+/*767px以下のスマホ*/
+  .inner{
+    width: 97%;
+  }
+
+  .title_wrapper{
+    padding: 160px 0 130px 0;
+  }
+
+  .title_text{
+    font-size: 80px;
+    margin-bottom: 0;
+  }
+
+  .title_text_sp{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .subtitle_text_sp{
+    display: block;
+    text-align: center;
+  }
+
+  .sns_wrapper{
+    padding-top: 50px;
+  }
+
+  .sns_content{
+    width: 97%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .header_content_textbox{
+    display: none;
+  }
+
+  .humberger_css{
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .humberger_menu{
+    position: relative;
+    width: 66.21px;
+    height: 40px;
+  }
+
+  .humberger_bar{
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .humberger_bar:nth-child(1){
+    top: 10px;
+  }
+
+  .humberger_bar:nth-child(2){
+    top: 20px;
+  }
+
+  .humberger_bar:nth-child(3){
+    top: 30px;
+  }
+
+
+}
+
 /*チェック　変更すべきところ
- 　icon bolt に変更
- 　iconとcontact　btn 左端と右端 >>marginでとってたものを1100pxの両サイドに配置した
+icon bolt に変更
+iconとcontact　btn 左端と右端 >>marginでとってたものを1100pxの両サイドに配置した
  　
  　title wrapper mainでpadding 380px指定　mainタグに >>titleのほうでpaddingとっていたのをmainタグにした
   title content入らない　無駄なものは消す >>title contentといういらないタグをなくしてtitle_textに入れた
@@ -291,5 +427,4 @@
   our_latest_work_text_containerがpaddingで余白をとっていたので
   marginに変更*/
 
-  /*3回目
-  */
+  
