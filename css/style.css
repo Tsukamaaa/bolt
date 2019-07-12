@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+.body_font{
+  font-family: Lato;
+}
 .clearfix::after{
   content: "";
   clear: both;
@@ -16,7 +19,7 @@
  }
 
 .header_wrapper{ /*headerの全体的な指定*/
-  text-align: center;
+  font-size: 0;
   padding: 15px 0;
   width: 100%;
   position: fixed;
@@ -24,61 +27,60 @@
   z-index: 1; /*これがないとimgのhoverでheaderも変化してしまう*/
 }
 
-.header_content{ /*floatで3つ浮かせて真ん中は何も入っていないパターンかもしれない*/
+.header_content{ 
+  font-size: 12px;
+  width: 550px;
   display: inline-block;
-  text-align: center;
   vertical-align: middle;
-  margin-left: 500px;
+  text-align: right;
 }
 
 .header_content:first-child{ 
   margin-left: 0;
+  text-align: left;
 }
 
 .header_content_textbox{
-  padding: 10px;
+  padding: 14px 12px;
+  font-size: 12px;
   background-color: #74cfae;
 }
 
 .header_contact_text{ /*contactのfont指定や周りの色 anchor*/
   color: #fff;
   display: inline-block;
-  font-size: 12px;
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
 }
 
 .header_content_textbox:hover .header_contact_text{
-  transition-duration: 0.3s;
   color: #333;
 }
 
+.main_css{
+  padding-top: 328px;
+  background-color: #f2f2f2;
+}
 
 .title_wrapper{ /*headerのposition: fixedが浮いているからtopは
   headerの高さ分足している*/
   background-color: #f2f2f2;
-  padding-top: 328px;
   padding-bottom: 250px;
-  padding-right: 0;
-  padding-left: 0;
   width: 100%;
-  font-family: Lato;
-}
-
-.title_content{ /*titleの中身の統一指定*/
-  text-align: center;
-  margin-top: 20px;
-}
-
-.title_content:first-child{ /*下の文章が増えてもいい用*/
-  margin-top: 0;
+  font-family: Raleway;
 }
 
 .title_text{
+  margin-top: 0;
+  text-align: center;
+  margin-top: 20px;
   font-size: 90px;
   font-weight: 700;
   color: #74cfae;
 }
 
 .subtitle_text{
+  text-align: center;
   font-size: 30px;
   color: #c0c0c0;
 }
@@ -108,13 +110,13 @@
   bottom: 0;
 }
 
-.iphone_title{ 
+.iphone_title{  /*margin-bottom: 35pxをここにつけるべきかも*/
   font-size: 24px;
   color: #fff;
+  margin-bottom: 35px;
 }
 
 .iphone_description{
-  padding-top: 35px;
   font-size: 20px;
   text-align: center;
   color: #fff;
@@ -139,13 +141,14 @@
 }
 
 .img_our_lastest_work{ /*imgの間隔を指定*/
+  display: inline-block;
   margin-top: 80px;
   margin-left: 100px;
   opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
 .img_our_lastest_work:hover{
-  transition-duration: 0.3s;
   opacity: 1;
 }
 
@@ -186,10 +189,10 @@
 .our_lastest_work_email_text{ /*Emailの文字のほう*/
   color: #fff;
   font-size: 12px;
+  transition: color 0.3s ease;
 }
 
 .our_lastest_work_text_content:hover .our_lastest_work_email_text{
-  transition-duration: 0.3s;
   color: #333;
 }
 
@@ -208,20 +211,22 @@
   text-align: center;
 }
 
-/* .our_skills_container{
-} */
+.our_skills_container{
+  font-size: 0;
+  text-align: center;
+}
 
 .our_skills_content{
   display: inline-block;
-  padding-left: 180px;
+  margin-left: 180px;
 }
 
 .our_skills_content:first-child{
-  padding-left: 0;
+  margin-left: 0;
 }
 
 .img_our_skills{
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .our_skills_text{
@@ -248,6 +253,7 @@
   padding-bottom: 20px;
   display: inline-block;
   width: 185px;
+  transition: background-color 0.3s ease;
 }
 
 .sns_item{
@@ -255,26 +261,35 @@
 }
 
 .sns_content:hover{
-  transition-duration: 0.3s;
   background-color: #fff;
 }
 
 .footer_wrapper{
   width: 100%;
   background-color: #74cfae;
-  font-family: Lato;
   padding-top: 20px;
   padding-bottom: 25px;
   text-align: right;
 }
-
-/* .footer_textbox{
-
-} */
 
 .footer_text{
   color: #fff;
 }
 
 /*チェック　変更すべきところ
-*/
+ 　icon bolt に変更
+ 　iconとcontact　btn 左端と右端 >>marginでとってたものを1100pxの両サイドに配置した
+ 　
+ 　title wrapper mainでpadding 380px指定　mainタグに >>titleのほうでpaddingとっていたのをmainタグにした
+  title content入らない　無駄なものは消す >>title contentといういらないタグをなくしてtitle_textに入れた
+  bolt titleはLota bodyタグに指定　一番上に 全体に指定する  >>font-family:Lato;をbody全体に指定
+  free bootstrap はpタグ　h1は基本的に一つ  >>h2タグだったものをpタグに変更
+  sectionタグごとにh1使ってもよい
+  ここ以外はh2タグ
+  inner の高さ0 clearfixが一つ下　iphoneのとこ  >>clearfixがiphone_wrapperについていたのでinnerにつけた
+  したはmargin指定what weのとこ >>paddingつけてたのをmarginに変更
+  img部をaタグにする  >>imgをaタグで囲った
+  その下　同じ高さにいるやつとの余白はmargin  >>間隔をpaddingでとっていたのでmarginに変更
+  ourskillsのpaddingはmargin
+  ドリブルが二つ目のアイコン >>footer_textboxという使ってないdivの削除
+  hoverが消えるのが早い0.3sかけて消えるように*/
