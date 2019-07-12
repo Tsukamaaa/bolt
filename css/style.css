@@ -19,7 +19,6 @@
  }
 
 .header_wrapper{ /*headerの全体的な指定*/
-  font-size: 0;
   padding: 15px 0;
   width: 100%;
   position: fixed;
@@ -27,20 +26,17 @@
   z-index: 1; /*これがないとimgのhoverでheaderも変化してしまう*/
 }
 
-.header_content{ 
-  font-size: 12px;
-  width: 550px;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: right;
+.header_content{ /*floatでやる*/
+  text-align: center;
+  float: left;
 }
 
-.header_content:first-child{ 
-  margin-left: 0;
-  text-align: left;
+.header_content:last-child{ 
+  float: right;
 }
 
 .header_content_textbox{
+  display: inline-block;
   padding: 14px 12px;
   font-size: 12px;
   background-color: #74cfae;
@@ -48,7 +44,6 @@
 
 .header_contact_text{ /*contactのfont指定や周りの色 anchor*/
   color: #fff;
-  display: inline-block;
   transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
 }
@@ -57,15 +52,15 @@
   color: #333;
 }
 
-.main_css{
-  padding-top: 316px;
+.main_css{/*ここはheader分だけ*/
+  padding-top: 48px;
   background-color: #f2f2f2;
 }
 
 .title_wrapper{ /*headerのposition: fixedが浮いているからtopは
   headerの高さ分足している*/
   background-color: #f2f2f2;
-  padding-bottom: 250px;
+  padding: 250px 0;
   width: 100%;
   font-family: Raleway;
 }
@@ -160,7 +155,7 @@
 }
 
 .our_lastest_work_text_container{ /*paddingで間隔をとる*/
-  padding-top: 90px;
+  margin-top: 90px;
   font-size: 20px;
   text-align: center;
 }
@@ -291,4 +286,13 @@
   その下　同じ高さにいるやつとの余白はmargin  >>間隔をpaddingでとっていたのでmarginに変更
   ourskillsのpaddingはmargin
   ドリブルが二つ目のアイコン >>footer_textboxという使ってないdivの削除
-  hoverが消えるのが早い0.3sかけて消えるように*/
+  hoverが消えるのが早い0.3sかけて消えるように
+  our text container paddingはmargin*/
+
+
+  /*2回目
+  headerにheader_wrapperを指定
+  headerの両サイドにfloatで浮かせる
+  mainタグのpadding-topをheader分だけにしてtitle_wrapperにpadding: 250px 0;
+  our_lastest_work_text_containerがpaddingで余白をとっていたので
+  marginに変更*/
