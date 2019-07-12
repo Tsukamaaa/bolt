@@ -57,11 +57,10 @@
   background-color: #f2f2f2;
 }
 
-.title_wrapper{ /*headerのposition: fixedが浮いているからtopは
-  headerの高さ分足している*/
+.title_wrapper{ /*headerのposition: fixedが浮いているからその分は
+  mainタグで高さ分足している*/
   background-color: #f2f2f2;
   padding: 250px 0;
-  width: 100%;
   font-family: Raleway;
 }
 
@@ -80,7 +79,6 @@
 }
 
 .iphone_wrapper{ /*iphoneの部分　ここでpadding指定しておくをまとめられる*/
-  width: 100%;
   background-color:  #74cfae;
   padding-top: 50px;
   font-family: Raleway;
@@ -116,25 +114,24 @@
   color: #fff;
 }
 
-.our_lastest_work_wrapper{ /*padding-topで上からの間隔をあける*/
-  width: 100%;
+.our_latest_work_wrapper{ /*padding-topで上からの間隔をあける*/
   font-family: Raleway;
   padding-top: 60px;
   padding-bottom: 70px;
   background-color: #f2f2f2;
 }
 
-.our_lastest_work_title{
+.our_latest_work_title{
   text-align: center;
   font-size: 24px;
   margin-bottom: 40px;
 }
 
-.our_lastest_work_container{ /*これで箱同士の間隔を0にしないと並ばない*/
+.our_latest_work_container{ /*これで箱同士の間隔を0にしないと並ばない*/
   font-size: 0;
 }
 
-.img_our_lastest_work{ /*imgの間隔を指定*/
+.img_our_latest_work{ /*imgの間隔を指定*/
   display: inline-block;
   margin-top: 80px;
   margin-left: 100px;
@@ -142,51 +139,51 @@
   transition: opacity 0.3s ease;
 }
 
-.img_our_lastest_work:hover{
+.img_our_latest_work:hover{
   opacity: 1;
 }
 
-.img_our_lastest_work:nth-child(3n-2){ /*3n-2番目のimgが一番左に来るので、そこのmarginを0にする*/
+.img_our_latest_work:nth-child(3n-2){ /*3n-2番目のimgが一番左に来るので、そこのmarginを0にする*/
   margin-left: 0;
 }
 
-.img_our_lastest_work:nth-child(-n+3){ /*-n+XでX番目まで 3番目まではmargin-topがいらないので外す*/
+.img_our_latest_work:nth-child(-n+3){ /*-n+XでX番目まで 3番目まではmargin-topがいらないので外す*/
   margin-top: 0;
 }
 
-.our_lastest_work_text_container{ /*marginで間隔をとる*/
+.our_latest_work_text_container{ /*marginで間隔をとる*/
   margin-top: 90px;
   font-size: 20px;
   text-align: center;
 }
 
-.our_lastest_work_text_content{ /*inline-blockにしてEmailの部分をvertical-alineで揃えられるようにする*/
+.our_latest_work_text_content{ /*inline-blockにしてEmailの部分をvertical-alineで揃えられるようにする*/
   display: inline-block;
   text-align: center;
   margin-left: 90px;
   vertical-align: middle;
 }
 
-.our_lastest_work_text_content:first-child{ /*文章部分の左にmarginはいらない*/
+.our_latest_work_text_content:first-child{ /*文章部分の左にmarginはいらない*/
   margin-left: 0;
 }
 
-.our_lastest_work_textbox{ /*文章部分のサイズ、大体こんなもんだと思う*/
+.our_latest_work_textbox{ /*文章部分のサイズ、大体こんなもんだと思う*/
   width: 500px;
 }
 
-.our_lastest_work_emailbox{ /*Emailの箱のほう*/
+.our_latest_work_emailbox{ /*Emailの箱のほう*/
   padding: 14px 20px;
   background-color: #74cfae;
 }
 
-.our_lastest_work_email_text{ /*Emailの文字のほう*/
+.our_latest_work_email_text{ /*Emailの文字のほう*/
   color: #fff;
   font-size: 12px;
   transition: color 0.3s ease;
 }
 
-.our_lastest_work_text_content:hover .our_lastest_work_email_text{
+.our_latest_work_text_content:hover .our_latest_work_email_text{
   color: #333;
 }
 
@@ -195,7 +192,6 @@
   background-color: #4e4e4e;
   padding-top: 70px;
   padding-bottom: 100px;
-  width: 100%
 }
 
 .our_skills_title{
@@ -230,7 +226,6 @@
 }
 
 .sns_wrapper{
-  width: 100%;
   background-color: #f2f2f2;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -259,7 +254,6 @@
 }
 
 .footer_wrapper{
-  width: 100%;
   background-color: #74cfae;
   padding-top: 20px;
   padding-bottom: 25px;
@@ -294,5 +288,8 @@
   headerにheader_wrapperを指定
   headerの両サイドにfloatで浮かせる
   mainタグのpadding-topをheader分だけにしてtitle_wrapperにpadding: 250px 0;
-  our_lastest_work_text_containerがpaddingで余白をとっていたので
+  our_latest_work_text_containerがpaddingで余白をとっていたので
   marginに変更*/
+
+  /*3回目
+  */
