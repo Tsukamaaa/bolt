@@ -328,10 +328,6 @@
 
 @media screen and (max-width: 767px){
 /*767px以下のスマホ*/
-  .inner{
-    width: 97%;
-  }
-
   .title_wrapper{
     padding: 160px 0 130px 0;
   }
