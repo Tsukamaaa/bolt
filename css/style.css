@@ -53,7 +53,7 @@
 }
 
 .main_css{/*ここはheader分だけ*/
-  padding-top: 48px;
+  padding-top: 78px;
   background-color: #f2f2f2;
 }
 
@@ -154,7 +154,7 @@
   margin-top: 0;
 }
 
-.our_lastest_work_text_container{ /*paddingで間隔をとる*/
+.our_lastest_work_text_container{ /*marginで間隔をとる*/
   margin-top: 90px;
   font-size: 20px;
   text-align: center;
